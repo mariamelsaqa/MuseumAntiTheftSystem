@@ -26,6 +26,7 @@ The proposal is to create a system that can be used in museums to prevent theft 
 |ESP32-Cam|![2-4-removebg-preview](https://user-images.githubusercontent.com/66432580/235498482-5766401c-70d7-4645-93e0-ec59ab4ba62f.png) | [click here](https://store.fut-electronics.com/collections/camera/products/esp32-cam-development-board-with-camera)|
 |Buzzer|![buzzer-removebg-preview](https://user-images.githubusercontent.com/66432580/235498269-09e48796-bdba-410b-a129-3aeb8cc4b2e5.png)| [click here](https://store.fut-electronics.com/products/buzzer-3-v?_pos=2&_sid=4215a7f5f&_ss=r)|
 |Keypad|![keypad-removebg-preview](https://user-images.githubusercontent.com/66432580/235498527-e2eb3870-e72a-4c74-b240-61768cda4a80.png) | [click here](https://store.fut-electronics.com/products/membrane-keypad-16-key-matrix-4x4?_pos=1&_sid=356c3914d&_ss=r)|
+|LCD Display|![lcd-removebg-preview](<img width="266" alt="Screenshot_2023-05-29_at_2 34 41_AM-removebg-preview" src="https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/175671ca-bce8-4a6f-b3d8-d7747a3407ed">)| [click here](https://www.alibaba.com/product-detail/1602-16x2-LCD-I2C-HD44780-Character_60516438236.html)|
 |LEDs|![led-removebg-preview](https://user-images.githubusercontent.com/66432580/235498306-92520710-b18b-4a42-8361-eaa7795d7972.png) | [click here](https://store.fut-electronics.com/products/led-kit-5-colors-10-pieces?_pos=3&_sid=959c6e323&_ss=r)|
 
 ## Architecture
