@@ -9,11 +9,7 @@
 | Mohamed Ali | [Mohamedakhalil](https://github.com/Mohamedakhalil)
 | Kirolos Mikhail | [KirolosAssaad](https://github.com/KirolosAssaad)
 
-## What is this project?
-The proposal is to create a system that can be used in museums to prevent theft of works of art. The system will be composed of a camera that will be responsible for capturing the images of a thief when change in the pressure of the floor is detected, which shall also trigger an alarm. Admins will be able to see the images captured by the camera in real time through a web application. To turn of the alarm the admin will have to enter the correct password through a numberpad.
 
-## Project Design
-    
 
 ## Identified Components
 | Component | Image |
@@ -40,7 +36,7 @@ This diagram shows the main hardware components of our system and how they are i
 This flowchart illustrates how different modules interact with each other on the software level. At the beginning, the main module will keep polling for the force sensor reading. If the reading decreases than a certain threshold, which means the artifact is being tampered with, then it will check for the authorization of the user. The user can authorize themselves through the attached keypad. If the password mismatches then there is a security breach in the system and the alarm will trigger. The alarm is composed of a buzzer, LED, and ESP32 Camera to identify the thief. Otherwise, then the access was authorized and the theft is eliminated.
 
 
-### Our Final Connections
+### Final Connections
 <img width="1139" alt="Screenshot 2023-05-29 at 9 11 08 AM" src="https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/c20c578c-f680-4935-a315-d79d046993aa">
 
 
@@ -51,34 +47,12 @@ This flowchart illustrates how different modules interact with each other on the
 - We connect the FSR with ADC (add 100k resistance) and GND.
 - We connect the ESP with Ground and GPIO_Output.
 
+## Installation
+- Download [Kiel V5](https://developer.arm.com/documentation/101407/0538/About-uVision/Installation) and [CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html#get-software) for the nucleo STM L432KC configurations.
+- Download [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/) for the ESP-32 configurations and the LILLYGO cam configurations.
+- To develop using ESP-IDF, VSCode is recommeneded. Download [VSCode](https://code.visualstudio.com/download) and install the [ESP-IDF extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension).
+- To run the backend server, download [Node JS](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm).
 
-
-## How to Replicate
-### To initially integrate the system:  
-- we had to trigger the buzzer and LED by interrupts not polling.  
-### To get the ESP-32 CAM work:  
-- We configured LILLYGO as a server that only works when it gets called to send a picture.
-- The host laptop works as a server that contains a GET Request that requests the picture from LILLYGO server. 
-- ESP-32 receives a trigger from STM (the same as the one received by the buzzer and LED) to call the host laptop API.
-
-## How to Deploy
-### prerequisites
-- Keil V5
-- CubeMX
-- ESP-IDF
-- NPM
-- Node JS & Express JS
-
-### Steps 
-- Open CubeMX and configure PA0-PA1-PA4-PA5 as GPIO_Input, configure PA6 till PA8, PA11, PA12 as GPIO_Output.
-- Configure UART2, ADC1, I2C1.
-- Clone the repo and copy the main.c, stm_it to your project.
-- Add liquid crystal .c and header files to your project.
-- In the LILLYGO directory run this command: ```idf.py build flash monitor```
-- In the ESP-32 directory run this command: ```idf.py build flash monitor```
-- In the backend server directory run this command: ```npm run dev```
-
-## Future work
-- deploy the server on the cloud.
-- create a 3D case for the whole system.
-- Add face detection using tiny machine learning.
+## Running the System
+- To run the nucleo STM L432KC, follow the STM_Source [README.md](./STM_Source/README.md) file.
+- To run the ESP-32, LILYGO or the backend server, follow the CAM_CODE [README.md](./CAM_CODE/README.md) file.
