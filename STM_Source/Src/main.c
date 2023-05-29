@@ -4,38 +4,6 @@
   * @file           : main.c
   * @brief          : Main program body
   ******************************************************************************
-  ** This notice applies to any and all portions of this file
-  * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether
-  * inserted by the user or by software development tools
-  * are owned by their respective copyright owners.
-  *
-  * COPYRIGHT(c) 2023 STMicroelectronics
-  *
-  * Redistribution and use in source and binary forms, with or without modification,
-  * are permitted provided that the following conditions are met:
-  *   1. Redistributions of source code must retain the above copyright notice,
-  *      this list of conditions and the following disclaimer.
-  *   2. Redistributions in binary form must reproduce the above copyright notice,
-  *      this list of conditions and the following disclaimer in the documentation
-  *      and/or other materials provided with the distribution.
-  *   3. Neither the name of STMicroelectronics nor the names of its contributors
-  *      may be used to endorse or promote products derived from this software
-  *      without specific prior written permission.
-  *
-  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-  *
-  ******************************************************************************
-  */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32l4xx_hal.h"
@@ -93,6 +61,7 @@ static void keypad(void);
 
 uint8_t x;
 
+		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
 void keypad(void){
 			HAL_GPIO_WritePin (GPIOA, C1_GPIO_PIN, GPIO_PIN_RESET);	//Pull the C1 low
 		HAL_GPIO_WritePin (GPIOA, C2_GPIO_PIN, GPIO_PIN_SET);  // Pull the C2 High
@@ -344,15 +313,8 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
-// __HAL_RTC_ALARM_ENABLE_IT(&hrtc,RTC_IT_ALRA);
   HD44780_Init(2);
   HD44780_Clear();
-//  HD44780_SetCursor(0,0);
-//  HD44780_PrintStr("Password?");
-//  HD44780_SetCursor(10,1);
-//  HD44780_PrintStr("WORLD");
-//  HAL_Delay(2000);
-
 
 
   /* USER CODE END 2 */
@@ -360,9 +322,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	   HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED);
-	HAL_TIM_Base_Start_IT(&htim16);
-//	HAL_ADC_Start(&hadc1);
-//    HAL_ADC_PollForConversion(&hadc1, 1);
+		HAL_TIM_Base_Start_IT(&htim16);
     Vamb = HAL_ADC_GetValue(&hadc1);
 		
     DC_Multiplier = 65535/(4096-Vamb);
@@ -391,7 +351,7 @@ int main(void)
 					sprintf(arr, "%d\r\n", res);
 
 				HAL_UART_Transmit(&huart2, (uint8_t *)&arr,sizeof(5),1000);
-		HAL_Delay(100);
+		HAL_Delay(1);
 		
   /* USER CODE END WHILE */
 
@@ -701,10 +661,14 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_11
                           |GPIO_PIN_12, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PA0 PA1 PA4 PA5 */
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_4|GPIO_PIN_5;
@@ -720,6 +684,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 
