@@ -105,6 +105,9 @@ We were able to integrate all the components to have the following functionality
 
 https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/0a5056c1-0c49-43e7-b715-33625de6cf05
 
+### Output Photo
+<img width="454" alt="Screenshot 2023-05-29 at 9 34 34 AM" src="https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/3195be63-f375-4866-8025-fe3622e5f2aa">
+
 
 ## How to Replicate
 ### To initially integrate the system:  
