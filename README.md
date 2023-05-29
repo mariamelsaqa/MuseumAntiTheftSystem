@@ -36,4 +36,9 @@ It contains the C and header files that should be copied into your keil project.
 2- ESP-32 CAM Code: 
 - `backendServer`: Contains the code for the backend server that would run on a PC.
 - `ESP32`: Contains the code for the ESP32 board to caall the backendServer APIs.
-- `LILYGO`: Contains the code for the LILYGO TTGO T-Camera ESP32 WROVER with PSRAM board to setup an HTTP server and send the image to the backendServer.
+- `LILYGO`: Contains the code for the LILYGO TTGO T-Camera ESP32 WROVER with PSRAM board to setup an HTTP server and send the image to the backendServer.  
+
+
+## References
+- [LCD tutorial](https://www.youtube.com/watch?v=EYrHRSeAUUc&t=363s)  
+- [ESP IDF repo]()
