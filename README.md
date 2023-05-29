@@ -34,7 +34,8 @@ The proposal is to create a system that can be used in museums to prevent theft 
 The following diagrams show the architecture of the system from both hardware and software perspectives.
 ### Block Diagram
 
-![System Block Diagram](https://github.com/shalan/CSCE4301-WiKi/assets/64040952/1a5153ef-5bb9-40a9-9095-6c7add8aeaee)\
+![WhatsApp Image 2023-05-29 at 8 11 51 AM](https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/554a0dc9-71ea-41ee-b1d4-05fce0c62bc2)
+
 This diagram shows the main hardware components of our system and how they are integrated together. The buzzer and LEDs serve as our alarm system. This Alarm system can be controlled by the user via the keypad in order to authorize themselves. The voltage divider circuit is the one responsible for measuring changes that may happen to museum artifacts. The voltage is dropped across the resistor and force-sensitive resistor. As the weight of the artifact decreases, the resistance increases which decreases the voltage input at the Analog to Digital Converter pin at the STM.
 
 ### Flowchart
@@ -89,7 +90,8 @@ We were able to integrate all the components to have the following functionality
 - The LCD asks for a password which can be entered, if the password is correct, the alarm and the LED will be turned off.
 
 ### Our Final Connections
-<img width="1633" alt="Screenshot 2023-05-29 at 3 31 25 AM" src="https://github.com/shalan/CSCE4301-WiKi/assets/64040952/1701edfa-fd7b-41c4-95e5-1edccacd2011">
+<img width="1139" alt="Screenshot 2023-05-29 at 9 11 08 AM" src="https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/c20c578c-f680-4935-a315-d79d046993aa">
+
 
 
 - We connect the buzzer and LED with the same GPIO_Output pin.   
@@ -99,7 +101,9 @@ We were able to integrate all the components to have the following functionality
 - We connect the FSR with ADC (add 100k resistance) and GND.
 
 ### Recorded Demo 
-https://github.com/shalan/CSCE4301-WiKi/assets/64040952/3aab9bf6-20c8-4d5b-a568-ec24a14c484d
+
+https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/0a5056c1-0c49-43e7-b715-33625de6cf05
+
 
 ## Steps
 ### To initially integrate the system:  
