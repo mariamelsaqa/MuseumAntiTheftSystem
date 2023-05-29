@@ -41,6 +41,6 @@ It contains the C and header files that should be copied into your keil project.
 
 ## References
 - [LCD tutorial](https://www.youtube.com/watch?v=EYrHRSeAUUc&t=363s)  
-- [ESP IDF repo]()
+- [ESP IDF repo](https://github.com/espressif/esp-idf)
 - [Keypad Datasheet](https://digilent.com/reference/_media/pmod:pmod:pmodKYPD_rm.pdf)
 - [Keypad tutorial](https://controllerstech.com/use-4x4-keypad-with-stm32/)
