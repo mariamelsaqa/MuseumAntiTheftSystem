@@ -105,10 +105,28 @@ We were able to integrate all the components to have the following functionality
 https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/0a5056c1-0c49-43e7-b715-33625de6cf05
 
 
-## Steps
+## How to Replicate
 ### To initially integrate the system:  
 - we had to trigger the buzzer and LED by interrupts not polling.  
 ### To get the ESP-32 CAM work:  
 - We configured LILLYGO as a server that only works when it gets called to send a picture.
 - The host laptop works as a server that contains a GET Request that requests the picture from LILLYGO server. 
 - ESP-32 receives a trigger from STM (the same as the one received by the buzzer and LED) to call the host laptop API.
+
+## How to Deploy
+### prerequisites
+- Keil V5
+- CubeMX
+- ESP-IDF
+- NPM
+- Node JS & Express JS
+
+### Steps 
+- In the LILLYGO directory run this command: ```idf.py build flash monitor```
+- In the ESP-32 directory run this command: ```idf.py build flash monitor```
+- In the backend server directory run this command: ```npm run dev```
+
+## Future work
+- deploy the server on the cloud.
+- create a 3D case for the whole system.
+- Add face detection using tiny machine learning.
