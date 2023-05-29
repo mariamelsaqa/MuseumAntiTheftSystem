@@ -1,0 +1,11 @@
+# Identified Components
+| Component | Image |
+| :---: | :---: |
+|[Nucleo STM32 board for the MCU](https://store.fut-electronics.com/products/nucleo-l432kc-stm32-arm-cortex-processing-board?_pos=3&_sid=48ed8e505&_ss=r)|![stmm-removebg-preview](https://user-images.githubusercontent.com/66432580/235498240-d0b9f7ff-8f5e-4902-9673-d2206655ca1c.png)|
+|[Force Sensitive Resistor Sensor](https://store.fut-electronics.com/collections/force-pressure-flex-1/products/force-sensitive-resistor-square)|![unnamed (1)](https://user-images.githubusercontent.com/66432580/235498678-790a640d-87bb-4b89-8be8-7b13213f1b23.png)|
+|[LILLYGO CAM](http://www.lilygo.cn/prod_view.aspx?TypeId=50067&Id=1273&FId=t3:50067:3)|<img width="285" alt="LILLYGO" src="https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/66432580/79843fce-5966-4a3f-b423-33f4d2ec7b8b">|
+|[ESP32](https://www.tme.eu/eg/en/details/esp32-devkitc-s1/development-kits-for-data-transmission/espressif/?brutto=1&currency=USD&gclid=Cj0KCQjw98ujBhCgARIsAD7QeAjpbOXTiMhu-4_GcjQN9xVIJMIN7XYYynX8KB4FPCby52vo_oHhkb0aAqGyEALw_wcB)|<img width="285" alt="Screenshot_2023-05-29_at_3 43 57_AM-removebg-preview" src="https://github.com/shalan/CSCE4301-WiKi/assets/64040952/4869950b-2738-4eb0-b3ee-43d2adb2377d">|
+|[Buzzer](https://store.fut-electronics.com/products/buzzer-3-v?_pos=2&_sid=4215a7f5f&_ss=r)|![buzzer-removebg-preview](https://user-images.githubusercontent.com/66432580/235498269-09e48796-bdba-410b-a129-3aeb8cc4b2e5.png)|
+|[Keypad](https://store.fut-electronics.com/products/membrane-keypad-16-key-matrix-4x4?_pos=1&_sid=356c3914d&_ss=r)|![keypad-removebg-preview](https://user-images.githubusercontent.com/66432580/235498527-e2eb3870-e72a-4c74-b240-61768cda4a80.png)|
+|[LCD Display with serial interface adapter module](https://www.alibaba.com/product-detail/1602-16x2-LCD-I2C-HD44780-Character_60516438236.html)|<img width="266" alt="Screenshot_2023-05-29_at_2 34 41_AM-removebg-preview" src="https://github.com/shalan/CSCE4301-WiKi/assets/64040952/dd12448f-f3ff-47f7-9086-4b936da354bc">|
+|[LEDs](https://store.fut-electronics.com/products/led-kit-5-colors-10-pieces?_pos=3&_sid=959c6e323&_ss=r)|![led-removebg-preview](https://user-images.githubusercontent.com/66432580/235498306-92520710-b18b-4a42-8361-eaa7795d7972.png) |
