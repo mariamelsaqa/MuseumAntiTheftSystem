@@ -1,5 +1,7 @@
 # CAMERA CODES
 
+## PRE-REQUISITES
+ALL DEVICES MUST BE CONNECT TO THE SAME WIFI NETWORK
 ## Description
 This folder contains all the codes needed to capture the image from the camera and send it to the server upon input change.
 
