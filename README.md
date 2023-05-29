@@ -54,8 +54,9 @@ This flowchart illustrates how different modules interact with each other on the
 
 
 ## How to Replicate
-### To initially integrate the system:  
+### In the STM Code:  
 - we had to trigger the buzzer and LED by interrupts not polling.  
+- The ESP-32 has a different GPIO pin from the Buzzer and LED as it will be triggered only once and not to be triggered.
 ### To get the ESP-32 CAM work:  
 - We configured LILLYGO as a server that only works when it gets called to send a picture.
 - The host laptop works as a server that contains a GET Request that requests the picture from LILLYGO server. 
@@ -63,17 +64,17 @@ This flowchart illustrates how different modules interact with each other on the
 
 ## How to Deploy
 ### prerequisites
-- Keil V5
-- CubeMX
-- ESP-IDF
-- NPM
-- Node JS & Express JS
+- Keil V5 (install from [here](https://developer.arm.com/documentation/101407/0538/About-uVision/Installation))
+- CubeMX (install from [here](https://www.st.com/en/development-tools/stm32cubemx.html))
+- ESP-IDF v4.0 or above
+- NPM (install from [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
+- Node JS & Express JS (install from [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
 
 ### Steps 
 - Open CubeMX and configure PA0-PA1-PA4-PA5 as GPIO_Input, configure PA6 till PA8, PA11, PA12 as GPIO_Output.
 - Configure UART2, ADC1, I2C1.
 - Clone the repo and copy the main.c, stm_it to your project.
-- Add liquid crystal .c and header files to your project.
+- Add liquid crystal C and header files to your project.
 - In the LILLYGO directory run this command: ```idf.py build flash monitor```
 - In the ESP-32 directory run this command: ```idf.py build flash monitor```
 - In the backend server directory run this command: ```npm run dev```
@@ -82,3 +83,14 @@ This flowchart illustrates how different modules interact with each other on the
 - deploy the server on the cloud.
 - create a 3D case for the whole system.
 - Add face detection using tiny machine learning.
+
+
+## File Structure
+Our repos consists of 2 directories: 
+1- STM Source Code: 
+It contains the C and header files that should be copied into your keil project.
+
+2- ESP-32 CAM Code: 
+- `backendServer`: Contains the code for the backend server that would run on a PC.
+- `ESP32`: Contains the code for the ESP32 board to caall the backendServer APIs.
+- `LILYGO`: Contains the code for the LILYGO TTGO T-Camera ESP32 WROVER with PSRAM board to setup an HTTP server and send the image to the backendServer.
