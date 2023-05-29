@@ -64,11 +64,11 @@ This flowchart illustrates how different modules interact with each other on the
 
 ## How to Deploy
 ### prerequisites
-- Keil V5 (install from [here](https://developer.arm.com/documentation/101407/0538/About-uVision/Installation))
-- CubeMX (install from [here](https://www.st.com/en/development-tools/stm32cubemx.html))
+- Keil V5 ([install](https://developer.arm.com/documentation/101407/0538/About-uVision/Installation))
+- CubeMX ([install](https://www.st.com/en/development-tools/stm32cubemx.html))
 - ESP-IDF v4.0 or above
-- NPM (install from [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
-- Node JS & Express JS (install from [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
+- NPM ([install](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
+- Node JS & Express JS ([install](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
 
 ### Steps 
 - Open CubeMX and configure PA0-PA1-PA4-PA5 as GPIO_Input, configure PA6 till PA8, PA11, PA12 as GPIO_Output.
