@@ -99,6 +99,7 @@ We were able to integrate all the components to have the following functionality
 - We connect the lower pins of the keypads with 4 GPIO_Input pins, GND, 3v3 respectively.  
 - We connect the LCD with I2C SCL and SDA.  
 - We connect the FSR with ADC (add 100k resistance) and GND.
+- We connect the ESP with Ground and GPIO_Output.
 
 ### Recorded Demo 
 
