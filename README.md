@@ -88,6 +88,7 @@ This flowchart illustrates how different modules interact with each other on the
 ## File Structure
 Our repos consists of 2 directories: 
 1- STM Source Code: 
+
 It contains the C and header files that should be copied into your keil project.
 
 2- ESP-32 CAM Code: 
