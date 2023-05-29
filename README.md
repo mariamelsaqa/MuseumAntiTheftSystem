@@ -56,3 +56,15 @@ This flowchart illustrates how different modules interact with each other on the
 ## Running the System
 - To run the nucleo STM L432KC, follow the STM_Source [README.md](./STM_Source/README.md) file.
 - To run the ESP-32, LILYGO or the backend server, follow the CAM_CODE [README.md](./CAM_CODE/README.md) file.
+
+
+## File Structure
+Our repos consists of 2 directories: 
+1- STM Source Code: 
+
+It contains the C and header files that should be copied into your keil project.
+
+2- ESP-32 CAM Code: 
+- `backendServer`: Contains the code for the backend server that would run on a PC.
+- `ESP32`: Contains the code for the ESP32 board to caall the backendServer APIs.
+- `LILYGO`: Contains the code for the LILYGO TTGO T-Camera ESP32 WROVER with PSRAM board to setup an HTTP server and send the image to the backendServer.
