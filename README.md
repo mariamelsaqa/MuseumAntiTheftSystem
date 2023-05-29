@@ -122,6 +122,8 @@ https://github.com/mariamelsaqa/MuseumAntiTheftSystem/assets/64040952/0a5056c1-0
 - Node JS & Express JS
 
 ### Steps 
+- Open CubeMX and configure PA0-PA1-PA4-PA5 as GPIO_Input, configure PA6 till PA8, PA11, PA12 as GPIO_Output.
+- Configure UART2, ADC1, I2C1.
 - In the LILLYGO directory run this command: ```idf.py build flash monitor```
 - In the ESP-32 directory run this command: ```idf.py build flash monitor```
 - In the backend server directory run this command: ```npm run dev```
